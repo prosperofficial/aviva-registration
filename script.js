@@ -15,36 +15,17 @@ const languages = {
   CN: { title: "Aviva Company Registration Website", thanks: "感谢您的注册！" }
 };
 
-// Full country names
-const countryNames = {
-  NG: "Nigeria",
-  US: "United States",
-  BR: "Brazil",
-  FR: "France",
-  ES: "Spain",
-  DE: "Germany",
-  IT: "Italy",
-  JP: "Japan",
-  CN: "China",
-  IN: "India",
-  RU: "Russia",
-  CA: "Canada",
-  MX: "Mexico",
-  GB: "United Kingdom"
-};
-
 form.addEventListener("submit", e => {
   e.preventDefault();
 
   const fullName = document.getElementById("fullName").value;
-  const countryCode = document.getElementById("country").value;
-  const country = countryNames[countryCode] || countryCode; // fallback to code if name not found
-  const lang = languages[countryCode] || { title: "Aviva Company Registration Website", thanks: "Thanks for registering!" };
+  const country = document.getElementById("country").value;
+  const lang = languages[country] || { title: "Aviva Company Registration Website", thanks: "Thanks for registering!" };
 
   // Update title and message
   title.textContent = lang.title;
   msg.innerHTML = `<span style="color:#4a90e2;">${lang.thanks}</span> ${fullName}${country ? ' from ' + country : ''}!`;
 
-  // Reset form
+  // Reset form fields
   form.reset();
 });
