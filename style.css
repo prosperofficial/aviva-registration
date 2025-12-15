@@ -1,87 +1,40 @@
-/* Body and background */
-body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background: #f0f2f5; /* light gray background */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-  margin: 0;
+/* Container for the form */
+form {
+  max-width: 400px;   /* Limits width on large screens */
+  width: 90%;         /* Scales on smaller screens */
+  margin: 20px auto;  /* Centers the form */
+  padding: 20px;
+  background: linear-gradient(to bottom right, #ffffff, #f0f0f0);
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
-/* Form container */
-.container {
-  background: #ffffff; /* white form background */
-  padding: 40px 45px;
-  border-radius: 15px;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
-  width: 400px;
-  max-width: 90%;
-  text-align: center;
-  border-top: 6px solid #4a90e2; /* subtle top accent in blue */
-}
-
-/* Form title */
-h1#title {
-  margin-bottom: 25px;
-  font-size: 26px;
-  color: #333333;
-  font-weight: 600;
-}
-
-/* Inputs and select styling */
-input, select {
+/* Inputs, select, and buttons fill the width */
+input, select, button {
   width: 100%;
-  padding: 12px 15px;
-  margin-top: 12px;
-  border-radius: 8px;
-  border: 1px solid #ccc;
+  padding: 10px;
+  margin: 10px 0;
   box-sizing: border-box;
-  font-size: 15px;
-  transition: all 0.3s;
+  border-radius: 5px;
+  border: 1px solid #ccc;
 }
 
-/* Focus effect */
-input:focus, select:focus {
-  outline: none;
-  border-color: #4a90e2;
-  box-shadow: 0 0 8px rgba(74,144,226,0.3);
-}
-
-/* Button styling */
+/* Make the submit button stand out */
 button {
-  background: linear-gradient(90deg, #4a90e2, #357ABD);
-  color: white;
+  background-color: #ffd700; /* golden yellow */
+  color: #333;
   font-weight: bold;
-  border: none;
   cursor: pointer;
-  padding: 12px;
-  border-radius: 8px;
-  font-size: 16px;
-  margin-top: 18px;
-  transition: transform 0.3s, box-shadow 0.3s;
 }
 
-button:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 8px 15px rgba(0,0,0,0.2);
-}
-
-/* Thank-you message */
-#message {
-  margin-top: 20px;
-  font-weight: bold;
-  color: #28a745; /* green for success */
-  font-size: 18px;
-}
-
-/* Mobile responsiveness */
+/* Responsive adjustments */
 @media (max-width: 500px) {
-  .container {
-    padding: 30px 20px;
+  form {
+    padding: 15px;
   }
 
-  h1#title {
-    font-size: 22px;
+  input, select, button {
+    padding: 8px;
   }
 }
+
