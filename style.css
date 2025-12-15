@@ -1,0 +1,87 @@
+/* Body and background */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #f0f2f5; /* light gray background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+}
+
+/* Form container */
+.container {
+  background: #ffffff; /* white form background */
+  padding: 40px 45px;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+  width: 400px;
+  max-width: 90%;
+  text-align: center;
+  border-top: 6px solid #4a90e2; /* subtle top accent in blue */
+}
+
+/* Form title */
+h1#title {
+  margin-bottom: 25px;
+  font-size: 26px;
+  color: #333333;
+  font-weight: 600;
+}
+
+/* Inputs and select styling */
+input, select {
+  width: 100%;
+  padding: 12px 15px;
+  margin-top: 12px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  font-size: 15px;
+  transition: all 0.3s;
+}
+
+/* Focus effect */
+input:focus, select:focus {
+  outline: none;
+  border-color: #4a90e2;
+  box-shadow: 0 0 8px rgba(74,144,226,0.3);
+}
+
+/* Button styling */
+button {
+  background: linear-gradient(90deg, #4a90e2, #357ABD);
+  color: white;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  padding: 12px;
+  border-radius: 8px;
+  font-size: 16px;
+  margin-top: 18px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 15px rgba(0,0,0,0.2);
+}
+
+/* Thank-you message */
+#message {
+  margin-top: 20px;
+  font-weight: bold;
+  color: #28a745; /* green for success */
+  font-size: 18px;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 500px) {
+  .container {
+    padding: 30px 20px;
+  }
+
+  h1#title {
+    font-size: 22px;
+  }
+}
